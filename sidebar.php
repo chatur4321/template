@@ -1,6 +1,15 @@
 <div id="sidebar"><div id="sidebar-wrapper"> <!-- Sidebar with logo and menu -->
 			
-			<h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+            <h1 id="sidebar-title"><a href="#">Simpla Admin</a></h1>
+            
+            <?php 
+                $filename=basename($_SERVER['REQUEST_URI']);
+                
+                $productmenu=array('addproduct.php','manageproducts.php','managecategories.php','managetags.php');
+                $usermenu=array('adduser.php','manageusers.php');
+                $ordermenu=array('manageorders.php');
+                $settingmenu=array('generalsettings.php');
+            ?>
 		  
 			<!-- Logo (221px wide) -->
 			<a href="#"><img id="logo" src="resources/images/logo.png" alt="Simpla Admin logo" /></a>
@@ -15,54 +24,51 @@
 			<ul id="main-nav">  <!-- Accordion Menu -->
 				
 				<li>
-					<a href="http://www.google.com/" class="nav-top-item no-submenu"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
+					<a href="index.php" class="nav-top-item no-submenu"> <!-- Add the class "no-submenu" to menu items with no sub menu -->
 						Dashboard
 					</a>       
 				</li>
 				
 				<li> 
-					<a href="#" class="nav-top-item current"> <!-- Add the class "current" to current menu item -->
+                    <a href="#" class="nav-top-item <?php if(in_array($filename, $productmenu)): ?>current<?php endif; ?>"> <!-- Add the class "current" to current menu item -->
 					Products
 					</a>
 					<ul>
-						<li><a href="#">Add a Product</a></li>
-						<li><a class="current" href="#">Manage Products</a></li> <!-- Add class "current" to sub menu items also -->
-						
-                        <li><a href="#">Manage Categories</a></li>
-                        <li><a href="#">Manage Tags</a></li>
+                        <li><a href="addproduct.php" <?php if($filename=="addproduct.php"): ?> class="current" <?php endif; ?>>Add Products</a></li>
+						<li><a <?php if($filename=="manageproducts.php"): ?> class="current" <?php endif; ?> href="manageproducts.php">Manage Products</a></li> <!-- Add class "current" to sub menu items also -->
+                        <li><a href="managecategories.php" <?php if($filename=="managecategories.php"): ?> class="current" <?php endif; ?>>Manage Categories</a></li>
+                        <li><a href="managetags.php" <?php if($filename=="managetags.php"): ?> class="current" <?php endif; ?>>Manage Tags</a></li>
 					</ul>
 				</li>
 				
 				<li>
-					<a href="#" class="nav-top-item">
+					<a href="#" class="nav-top-item <?php if(in_array($filename, $usermenu)): ?>current<?php endif; ?>">
 						Users
 					</a>
 					<ul>
-						<li><a href="#">Add a New User</a></li>
-						<li><a href="#">Manage User</a></li>
+						<li><a href="adduser.php" <?php if($filename=="adduser.php"): ?> class="current" <?php endif; ?>>Add users</a></li>
+						<li><a href="manageusers.php" <?php if($filename=="manageusers.php"): ?> class="current" <?php endif; ?>>Manage users</a></li>
 					</ul>
-                </li>
-                <li>
-					<a href="#" class="nav-top-item">
+				</li>
+				
+				<li>
+					<a href="#" class="nav-top-item <?php if(in_array($filename, $ordermenu)): ?>current<?php endif; ?>">
 						Orders
 					</a>
 					<ul>
 						
-						<li><a href="#">Manage orders</a></li>
+						<li><a href="manageorders.php" <?php if($filename=="manageorders.php"): ?> class="current" <?php endif; ?>>Manage Orders</a></li>
 					</ul>
 				</li>
 				
 				
-				
 				<li>
-					<a href="#" class="nav-top-item">
+					<a href="#" class="nav-top-item <?php if(in_array($filename, $settingmenu)): ?>current<?php endif; ?>">
 						Settings
 					</a>
 					<ul>
-						<li><a href="#">General</a></li>
-						<li><a href="#">Design</a></li>
-						<li><a href="#">Your Profile</a></li>
-						<li><a href="#">Users and Permissions</a></li>
+						<li><a href="generalsettings.php" <?php if($filename=="generalsettings.php"): ?> class="current" <?php endif; ?>>General</a></li>
+						
 					</ul>
 				</li>      
 				

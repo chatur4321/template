@@ -1,5 +1,8 @@
-<?php include('header.php'); ?>
-<?php include('sidebar.php'); ?>
+<?php 
+
+	require "header.php";
+	require "sidebar.php";
+?>
 		
 		<div id="main-content"> <!-- Main Content Section with everything -->
 			
@@ -15,7 +18,7 @@
 			<h2>Welcome John</h2>
 			<p id="page-intro">What would you like to do?</p>
 			
-			<ul class="shortcut-buttons-set">
+			<!-- <ul class="shortcut-buttons-set">
 				
 				<li><a class="shortcut-button" href="#"><span>
 					<img src="resources/images/icons/pencil_48.png" alt="icon" /><br />
@@ -42,7 +45,7 @@
 					Open Modal
 				</span></a></li>
 				
-			</ul><!-- End .shortcut-buttons-set -->
+			</ul>End .shortcut-buttons-set -->
 			
 			<div class="clear"></div> <!-- End .clear -->
 			
@@ -53,8 +56,8 @@
 					<h3>Content box</h3>
 					
 					<ul class="content-box-tabs">
-						<li><a href="#tab1" class="default-tab">Manage</a></li> <!-- href must be unique and match the id of target div -->
-						<li><a href="#tab2">Add</a></li>
+						<li><a href="#tab1" class="default-tab">Table</a></li> <!-- href must be unique and match the id of target div -->
+						<li><a href="#tab2">Forms</a></li>
 					</ul>
 					
 					<div class="clear"></div>
@@ -293,15 +296,15 @@
 				
 			</div> <!-- End .content-box -->
 			
-			<div class="content-box column-left">
+			<!--<div class="content-box column-left">
 				
 				<div class="content-box-header">
 					
 					<h3>Content box left</h3>
 					
-				</div> <!-- End .content-box-header -->
+				</div>--> <!-- End .content-box-header -->
 				
-				<div class="content-box-content">
+				<!--<div class="content-box-content">
 					
 					<div class="tab-content default-tab">
 					
@@ -310,21 +313,21 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in porta lectus. Maecenas dignissim enim quis ipsum mattis aliquet. Maecenas id velit et elit gravida bibendum. Duis nec rutrum lorem. Donec egestas metus a risus euismod ultricies. Maecenas lacinia orci at neque commodo commodo.
 						</p>
 						
-					</div> <!-- End #tab3 -->        
+					</div>--> <!-- End #tab3 -->        
 					
-				</div> <!-- End .content-box-content -->
+				<!--</div>--> <!-- End .content-box-content -->
 				
-			</div> <!-- End .content-box -->
+			<!--</div>--> <!-- End .content-box -->
 			
-			<div class="content-box column-right closed-box">
+			<!--<div class="content-box column-right closed-box">
 				
-				<div class="content-box-header"> <!-- Add the class "closed" to the Content box header to have it closed by default -->
+				<div class="content-box-header">--> <!-- Add the class "closed" to the Content box header to have it closed by default -->
 					
-					<h3>Content box right</h3>
+					<!--<h3>Content box right</h3>
 					
-				</div> <!-- End .content-box-header -->
+				</div>--> <!-- End .content-box-header -->
 				
-				<div class="content-box-content">
+				<!--<div class="content-box-content">
 					
 					<div class="tab-content default-tab">
 					
@@ -333,17 +336,17 @@
 						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed in porta lectus. Maecenas dignissim enim quis ipsum mattis aliquet. Maecenas id velit et elit gravida bibendum. Duis nec rutrum lorem. Donec egestas metus a risus euismod ultricies. Maecenas lacinia orci at neque commodo commodo.
 						</p>
 						
-					</div> <!-- End #tab3 -->        
+					</div>--> <!-- End #tab3 -->        
 					
-				</div> <!-- End .content-box-content -->
+				<!--</div>--> <!-- End .content-box-content -->
 				
-			</div> <!-- End .content-box -->
+			<!--</div>--> <!-- End .content-box -->
 			<div class="clear"></div>
 			
 			
 			<!-- Start Notifications -->
 			
-			<div class="notification attention png_bg">
+			<!-- <div class="notification attention png_bg">
 				<a href="#" class="close"><img src="resources/images/icons/cross_grey_small.png" title="Close this notification" alt="close" /></a>
 				<div>
 					Attention notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, sapien quis fermentum luctus, libero. 
@@ -369,9 +372,11 @@
 				<div>
 					Error notification. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin vulputate, sapien quis fermentum luctus, libero.
 				</div>
-			</div>
+			</div> -->
 			
 			<!-- End Notifications -->
-			
-			<?php include('footer.php'); ?>			
-			
+
+<?php 
+
+require "footer.php";
+?>
